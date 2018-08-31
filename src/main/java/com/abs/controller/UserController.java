@@ -3,6 +3,11 @@ package com.abs.controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.abs.service.UserService;
+
 import javafx.fxml.Initializable;
 
 import javafx.event.ActionEvent;
@@ -23,20 +28,25 @@ public class UserController implements Initializable{   // implementing initiali
 	private TextField emailField;
 	
 	@FXML 
-	private PasswordField passwordField;	
+	private PasswordField passwordField;
+	
+	@Autowired 
+	private UserService userService;
 	
 	@FXML
 	public void login(ActionEvent event) throws IOException {	
 		String email = emailField.getText();
 		String password = passwordField.getText();
 		if(email.equals("admin") && password.equalsIgnoreCase("admin")) {
-		Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();  //calling the stage of first fxml page
-		Parent root = FXMLLoader.load(getClass().getResource("/fxml/dashboard.fxml"));
-		Scene scene = new Scene(root);				
-		scene.getStylesheets().add(getClass().getResource("/styles/application.css").toExternalForm());		
-		primaryStage.setScene(scene);
-		primaryStage.setTitle("Dashboard");
-		primaryStage.show();
+			
+			Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();  //calling the stage of first fxml page
+			Parent root = FXMLLoader.load(getClass().getResource("/fxml/dashboard.fxml"));
+			Scene scene = new Scene(root);				
+			scene.getStylesheets().add(getClass().getResource("/styles/application.css").toExternalForm());		
+			primaryStage.setScene(scene);
+			primaryStage.setTitle("Dashboard");
+			primaryStage.show();
+			
 		}else {
 			Alert al = new Alert(Alert.AlertType.ERROR);
 			al.setTitle("Login failed");

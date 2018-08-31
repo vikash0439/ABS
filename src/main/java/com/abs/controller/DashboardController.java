@@ -19,7 +19,7 @@ public class DashboardController implements Initializable{
 	@FXML
 	public void service(ActionEvent event) throws IOException {	
 	
-		Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();  //calling the stage of first fxml page
+		Stage primaryStage = new Stage();  //calling the stage of first fxml page
 		Parent root = FXMLLoader.load(getClass().getResource("/fxml/service.fxml"));
 		Scene scene = new Scene(root);				
 		scene.getStylesheets().add(getClass().getResource("/styles/application.css").toExternalForm());		
@@ -27,7 +27,8 @@ public class DashboardController implements Initializable{
 		primaryStage.setTitle("Service || ABS");
 		primaryStage.show();
 		
-		}		
+	}	
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub

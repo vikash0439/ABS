@@ -32,5 +32,6 @@ public class AbsApplication extends Application{   //Inheriting application clas
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("User Login");
 		primaryStage.show();
+		
 	}
 }

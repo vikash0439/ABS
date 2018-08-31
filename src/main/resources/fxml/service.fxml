@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abs.controller.ServiceController">
    <top>
       <MenuBar style="-fx-background-color: #6699ff;" BorderPane.alignment="CENTER">
         <menus>
@@ -90,22 +90,22 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField promptText="Service ID">
+            <TextField fx:id="serviceId" promptText="Service ID">
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="Service Name">
+            <TextField fx:id="serviceName" promptText="Service Name">
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="Service Charge">
+            <TextField fx:id="serviceCharge" promptText="Service Charge">
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="Cancel Charge">
+            <TextField fx:id="cancelCharge" promptText="Cancel Charge">
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
@@ -125,7 +125,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </CheckBox>
-            <Button mnemonicParsing="false" style="-fx-background-color: #6699ff;" text="Update" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#ServiceSave" style="-fx-background-color: #6699ff;" text="Update" textFill="WHITE">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
