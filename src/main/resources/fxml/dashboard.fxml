@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import de.jensd.fx.glyphs.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abs.controller.DashboardController">
+   <top>
+      <MenuBar style="-fx-background-color: #6699ff;" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Booking">
+            <items>
+              <MenuItem mnemonicParsing="false" text="New Contract" />
+                  <MenuItem mnemonicParsing="false" text="Reserve Dates" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Accounting">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Receipt" />
+                  <MenuItem mnemonicParsing="false" text="Invoice" />
+                  <MenuItem mnemonicParsing="false" text="Tax" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Customer">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" onAction="#service" onMenuValidation="#service" text="Service" />
+            <Menu mnemonicParsing="false" text="Miscellanous" />
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="31.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutY="5.0" text="SRCPA @ 2018" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="100.0" right="100.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

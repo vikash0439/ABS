@@ -27,25 +27,26 @@ public class UserController implements Initializable{   // implementing initiali
 	
 	@FXML
 	public void login(ActionEvent event) throws IOException {	
+		String email = emailField.getText();
+		String password = passwordField.getText();
+		if(email.equals("admin") && password.equalsIgnoreCase("admin")) {
 		Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();  //calling the stage of first fxml page
-		Parent root = FXMLLoader.load(getClass().getResource("/fxml/home.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("/fxml/dashboard.fxml"));
 		Scene scene = new Scene(root);				
 		scene.getStylesheets().add(getClass().getResource("/styles/application.css").toExternalForm());		
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Dashboard");
 		primaryStage.show();
+		}else {
+			Alert al = new Alert(Alert.AlertType.ERROR);
+			al.setTitle("Login failed");
+			al.setHeaderText("Invalid credentials");
+			al.setContentText("Try again");
+			al.showAndWait();
+		}
 	}
 	
 	
-	@FXML 
-	public void alert(ActionEvent event) throws IOException {	   //creating an alert box
-		
-		Alert al = new Alert(Alert.AlertType.INFORMATION);
-		al.setTitle("Information");
-		al.setHeaderText("Plaese read carefully!");
-		al.setContentText("12:44:12.409 [main] DEBUG com.abs.AbsApplication - Logging from At com.abs packaged");
-		al.showAndWait();
-	}
 	
 
 	@Override

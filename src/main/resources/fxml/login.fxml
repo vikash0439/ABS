@@ -16,16 +16,11 @@
             <Image url="@../images/logo.jpg" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="179.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auditorium Booking System" wrappingWidth="503.515625">
+      <Text fill="WHITE" layoutX="179.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auditorium Booking System" wrappingWidth="503.515625">
          <font>
             <Font name="Agency FB Bold" size="50.0" />
          </font>
       </Text>
-      <Label layoutX="537.0" layoutY="152.0" prefHeight="21.0" prefWidth="204.0" text="status here" textFill="#cf152df1">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
       <TextField fx:id="emailField" layoutX="492.0" layoutY="189.0" prefHeight="45.0" prefWidth="281.0" promptText="Email-ID">
          <effect>
             <DropShadow />
@@ -51,10 +46,10 @@
                </font>
             </Label>
          </children></AnchorPane>
-      <Button layoutX="196.0" layoutY="334.0" mnemonicParsing="false" onAction="#alert" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #4286f4;" text="Alert" textFill="WHITE">
-         <effect>
-            <DropShadow />
-         </effect>
-      </Button>
+      <ImageView fitHeight="76.0" fitWidth="84.0" layoutX="587.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icon_user.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

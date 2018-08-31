@@ -27,7 +27,7 @@ public class AbsApplication extends Application{   //Inheriting application clas
 		Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
 		Scene scene = new Scene(root);
 		scene.getStylesheets().add(getClass().getResource("/styles/application.css").toExternalForm());		
-		Image applicationIcon = new Image(getClass().getResourceAsStream("/images/Logo (1).jpg"));   // setting favicon icon
+		Image applicationIcon = new Image(getClass().getResourceAsStream("/images/favicon.jpg"));   // setting favicon icon
         primaryStage.getIcons().add(applicationIcon);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("User Login");
