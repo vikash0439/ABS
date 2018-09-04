@@ -1,7 +1,14 @@
 package com.abs.service;
 
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+import com.abs.bean.User;
 import com.abs.repository.UserRepository;
 
+@Service
+@Transactional
 public class UserService{
 	
    private final UserRepository userRepository;
@@ -10,11 +17,7 @@ public class UserService{
 		this.userRepository = userRepository;
 	}
 	
-	public boolean check(String email, String password) {
-		if (userRepository.findByEmailAndPassword(email, password)) {
-		return true ;
-		}else
-	return false;
-	}
-
+	public User check(String email, String password) {
+		return userRepository.findByEmailAndPassword(email, password);
+   }
 }

@@ -5,10 +5,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="service", schema="SRCPA")
+@Table(name="service")
 public class Service {
 	
 	@Id
+	
 	private long id;
 	private String serviceName;
 	private String serviceCharge;
@@ -38,6 +39,20 @@ public class Service {
 	public void setCancelCharge(String cancelCharge) {
 		this.cancelCharge = cancelCharge;
 	}
+	
+	public Service() {
+		
+	}
+	
+	
+	public Service(long id, String serviceName, String serviceCharge, String cancelCharge) {
+		super();
+		this.id = id;
+		this.serviceName = serviceName;
+		this.serviceCharge = serviceCharge;
+		this.cancelCharge = cancelCharge;
+	}
+	
 	
 	
 

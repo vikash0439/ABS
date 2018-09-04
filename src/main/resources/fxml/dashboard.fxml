@@ -19,8 +19,8 @@
         <menus>
           <Menu mnemonicParsing="false" text="Booking">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#service" text="New Contract" />
-                  <MenuItem mnemonicParsing="false" text="Reserve Dates" />
+              <MenuItem mnemonicParsing="false" onAction="#booking" text="New Contract" />
+              <MenuItem mnemonicParsing="false" text="Reserve Dates" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Accounting">
@@ -32,11 +32,16 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Customer">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+               <MenuItem mnemonicParsing="false" text="Add New" />
+              <MenuItem mnemonicParsing="false" onAction="#customer" text="All Customer" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="Service" />
-            <Menu mnemonicParsing="false" text="Miscellanous" />
+            <Menu mnemonicParsing="false" text="Service">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#service" text="All Services" />
+                  <MenuItem mnemonicParsing="false" text="Add New" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" onAction="#miscellanous" text="Miscellanous" />
         </menus>
          <effect>
             <DropShadow />

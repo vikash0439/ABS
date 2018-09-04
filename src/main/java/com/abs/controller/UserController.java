@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Component;
 import com.abs.service.UserService;
 
 import javafx.fxml.Initializable;
@@ -22,23 +22,33 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.stage.Stage;
 
+
+@Component
 public class UserController implements Initializable{   // implementing initializable declare the class as controller
 	
 	@FXML
 	private TextField emailField;
-	
+
 	@FXML 
 	private PasswordField passwordField;
 	
 	@Autowired 
 	private UserService userService;
-	
+
+
+
 	@FXML
 	public void login(ActionEvent event) throws IOException {	
 		String email = emailField.getText();
 		String password = passwordField.getText();
-		if(email.equals("admin") && password.equalsIgnoreCase("admin")) {
+		
+//		if(userService.check(email, password) != null) {
+//			System.out.println("Crdentials exists");
+//		}else {
+//			System.out.println("No user exist");
+//		}
 			
+		if(email.equals("admin") && password.equalsIgnoreCase("admin")) {		
 			Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();  //calling the stage of first fxml page
 			Parent root = FXMLLoader.load(getClass().getResource("/fxml/dashboard.fxml"));
 			Scene scene = new Scene(root);				
@@ -53,9 +63,8 @@ public class UserController implements Initializable{   // implementing initiali
 			al.setHeaderText("Invalid credentials");
 			al.setContentText("Try again");
 			al.showAndWait();
-		}
+		}				
 	}
-	
 	
 	
 

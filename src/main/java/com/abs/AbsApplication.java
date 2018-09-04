@@ -3,6 +3,8 @@ package com.abs;
 import org.slf4j.Logger;
 import static org.slf4j.LoggerFactory.getLogger;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +26,7 @@ public class AbsApplication extends Application{   //Inheriting application clas
 	@Override
 	public void start(Stage primaryStage) throws Exception {  //start class is the main entry point of all javafx application
 		// TODO Auto-generated method stub
-		Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("/fxml/index.fxml"));
 		Scene scene = new Scene(root);
 		scene.getStylesheets().add(getClass().getResource("/styles/application.css").toExternalForm());		
 		Image applicationIcon = new Image(getClass().getResourceAsStream("/images/favicon.jpg"));   // setting favicon icon
@@ -34,4 +36,6 @@ public class AbsApplication extends Application{   //Inheriting application clas
 		primaryStage.show();
 		
 	}
+	
+	 
 }

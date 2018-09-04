@@ -38,14 +38,13 @@ public class ServiceController implements Initializable{
 		Alert al = new Alert(Alert.AlertType.CONFIRMATION);
 		al.setTitle("Saved");
 		al.setHeaderText("Service updated successfully");
-		al.setContentText("");
+		al.setContentText("This service have been updated successfully.");
 		al.showAndWait();
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub		
 	}
 
 }

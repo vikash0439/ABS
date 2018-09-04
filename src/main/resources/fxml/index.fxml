@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abs.controller.UserController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: images\background.jpeg;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abs.controller.UserController">
    <top>
       <AnchorPane prefHeight="64.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
    </top>
@@ -19,7 +18,7 @@
       <AnchorPane prefHeight="61.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
    </bottom>
    <right>
-      <VBox prefHeight="275.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="275.0" prefWidth="279.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="101.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -29,10 +28,25 @@
                   <Insets left="50.0" top="20.0" />
                </VBox.margin>
             </ImageView>
-            <TextField fx:id="emailField" promptText="Email ID" />
-            <PasswordField fx:id="passwordField" promptText="Password" />
-            <Button mnemonicParsing="false" onAction="#login" text="Button" />
+            <TextField fx:id="emailField" promptText="Email ID">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></TextField>
+            <PasswordField fx:id="passwordField" promptText="Password">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></PasswordField>
+            <Button mnemonicParsing="false" onAction="#login" style="-fx-background-color: blue;" text="Button" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="80.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
          </children>
+         <BorderPane.margin>
+            <Insets left="20.0" right="10.0" />
+         </BorderPane.margin>
       </VBox>
    </right>
    <center>
